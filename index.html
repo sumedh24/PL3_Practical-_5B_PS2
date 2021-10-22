@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header start -->
+    <Header>
+        <h1>Write a code in any programming language that converts
+            Cenverts binary number to decimal number.</h1>
+    </Header>
+    <!-- Header End -->
+    <hr>
+
+    <!-- Article Start -->
+    <article>
+        <hr>
+        <section>
+            <h3>CODE</h3>
+            <code>
+                <pre>
+                    #include<iostream>
+                    using namespace std;
+                     
+                    // Function to convert binary to decimal
+                    int binaryToDecimal(int n)
+                    {
+                        int num = n;
+                        int dec_value = 0;
+                     
+                        // Initializing base value to 1, i.e 2^0
+                        int base = 1;
+                     
+                        int temp = num;
+                        while (temp) {
+                            int last_digit = temp % 10;
+                            temp = temp / 10;
+                     
+                            dec_value += last_digit * base;
+                     
+                            base = base * 2;
+                        }
+                     
+                        return dec_value;
+                    }
+                     
+                    // Driver program to test above function
+                    int main()
+                    {
+                        int num = 1110;
+                     
+                        cout << binaryToDecimal(num) << endl;
+                    }
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section>
+            <h3>Sample Input</h3>
+            <kbd>0100110</kbd>
+            <h3>Sample Output</h3>
+            <samp>14</samp>
+        </section>
+        <section>
+            <h3>Variable used in the program</h3>
+            <var>num,</var> <var>dec_value,</var><var>temp,</var> <var>last_digit,</var> <var>base.</var>
+        </section>
+    </article>
+    <!-- Article End-->
+    <hr>
+    <!-- Footer Start -->
+    <footer>
+        <h4>
+            What are binary number?
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">Click Here</a>
+        </h4>
+    </footer>
+    <!-- Footer End -->
+</body>
+
+</html>
